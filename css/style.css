@@ -455,7 +455,12 @@ section {
   background: url(../image/footer3.jpg) no-repeat;
   background-size: cover; /* Scale the background image to cover the entire area of the footer. */
 }
-
+.footer {
+  background: url(../image/footer3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 .footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
