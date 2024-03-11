@@ -9,7 +9,7 @@
   --light-white: #fff9;
   --dark-bg: rgba(0, 0, 0, 7);
   --light-bg: #eee;
-  --border: 0.9rem solid var(--black);
+  --border: 0.5rem solid var(--black);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 3);
 }
@@ -243,6 +243,9 @@ section {
   line-height: 2;
   color: var(--black);
 }
+.border-dark {
+  border: var(--border);
+}
 
 /*media Quaries */
 @media (max-width: 1200px) {
@@ -408,14 +411,54 @@ section {
   color: var(--light-black);
   display: block;
 }
-.footer {
+.review {
+  background: var(--light-bg);
+}
+.review .slide {
+  padding: 2rem;
+  border: var(--border); /* Apply border color from custom property */
+  background: var(--white); /* Apply background color from custom property */
+  text-align: center;
+  box-shadow: var(--box-shadow); /* Apply box shadow from custom property */
+}
+
+.review .slide .stars {
+  padding: bottom 5rem;
+}
+.review .slide .stars i {
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+.review .slide p {
+  font-size: 1.5rem;
+  color: var(--light-black);
+  line-height: 2;
+  padding: 1rem 0;
+}
+.review .slide h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+.review .slide span {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  display: block;
+}
+.review .slide img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 25%;
+  margin-top: 1rem;
+}
+
+.review .sw .footer {
   background: url(../image/footer3.jpg) no-repeat;
   background-size: cover; /* Scale the background image to cover the entire area of the footer. */
 }
 
 .footer .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(26rem, 0.9fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 3.2rem;
 }
 .footer .box-container .box h3 {
@@ -426,7 +469,7 @@ section {
 
 .footer .box-container .box a {
   color: var(--light-white);
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-bottom: 1.5rem;
   display: block;
 }
