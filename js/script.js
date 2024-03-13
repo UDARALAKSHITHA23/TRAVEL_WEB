@@ -34,3 +34,19 @@ var swiper = new Swiper(".review-slider", {
     },
   },
 });
+document.addEventListener("DOMContentLoaded", function () {
+  let loadMoreBtn = document.querySelector(".packge .load-more .btn");
+  let currentItem = 3;
+  if (loadMoreBtn) {
+    loadMoreBtn.onclick = () => {
+      let boxes = document.querySelectorAll(".packge .box-container .box");
+      for (var i = currentItem; i < currentItem + 3 && i < boxes.length; i++) {
+        boxes[i].style.display = "inline-block";
+      }
+      currentItem += 3;
+      if (currentItem >= boxes.length) {
+        loadMoreBtn.style.display = "none";
+      }
+    };
+  }
+});

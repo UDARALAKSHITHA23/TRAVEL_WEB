@@ -9,7 +9,7 @@
   --light-white: #fff9;
   --dark-bg: rgba(0, 0, 0, 7);
   --light-bg: #eee;
-  --border: 0.5rem solid var(--black);
+  --border: 0.02rem solid var(--black);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 3);
 }
@@ -420,6 +420,7 @@ section {
   background: var(--white); /* Apply background color from custom property */
   text-align: center;
   box-shadow: var(--box-shadow); /* Apply box shadow from custom property */
+  user-select: none;
 }
 
 .review .slide .stars {
@@ -450,7 +451,64 @@ section {
   border-radius: 25%;
   margin-top: 1rem;
 }
+.packge {
+  background: var(--light-bg);
+}
+.packge .box-container .box {
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  background: var(--white);
+  display: none;
+}
+.packge .box-container .box:nth-child(1),
+.packge .box-container .box:nth-child(2),
+.packge .box-container .box:nth-child(3),
+.packge .box-container .box:nth-child(4),
+.packge .box-container .box:nth-child(5),
+.packge .box-container .box:nth-child(6) {
+  display: inline-block;
+}
+.packge .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
+}
+.packge .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+.packge .box-container .box .content p {
+  font-size: 1.5rem;
+  color: var(--light-black);
+  line-height: 2;
+  padding: 1rem 0;
+}
+.packge .box-container {
+  display: grid; /* Use CSS Grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(30rem, 1fr)
+  ); /* Automatically fit columns with a minimum width of 25rem and maximum width of 1fr */
+  gap: 2rem; /* Set gap between grid items to 2rem */
+}
 
+/* Style for images within '.box-container' */
+.packge .box-container .box .image {
+  height: 25rem; /* Set height of images to 25rem */
+  overflow: hidden; /* Hide any content that overflows the defined height */
+}
+.packge .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.packge .box-container .box .content {
+  padding: 2rem;
+}
+.packge .load-more {
+  text-align: center;
+  margin-top: 2rem;
+}
 .review .sw .footer {
   background: url(../image/footer3.jpg) no-repeat;
   background-size: cover; /* Scale the background image to cover the entire area of the footer. */
