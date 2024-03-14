@@ -559,7 +559,10 @@ section {
   font-size: 1.5rem;
   color: var(--light-black);
 }
-
+.booking .book-form .btn {
+  margin-top: 2rem;
+  border-radius: 5px;
+}
 .review .sw .footer {
   background: url(../image/footer3.jpg) no-repeat;
   background-size: cover; /* Scale the background image to cover the entire area of the footer. */

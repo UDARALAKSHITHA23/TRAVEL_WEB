@@ -44,7 +44,7 @@
     <section class="booking">
 
         <h1 class="heading-title">Book Your Trip!</h1>
-        <form action="boock_form.php" method="POST" class="book-form">
+        <form action="book_form.php" method="POST" class="book-form">
             <div class="flex">
                 <div class="inputBox">
                     <span>Name:</span>
