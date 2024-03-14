@@ -16,24 +16,7 @@
 
 <body>
     <!-- head section satrt -->
-    <section class="header">
-        <a href="home.php" class="logo"> Travel.LK </a>
-
-
-        <nav class="navbar">
-            <a href="home.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="book.php">Book</a>
-            <a href="packge.php">Packge</a>
-        </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-
-
-
-
-
-    </section>
+    <?php include('header.php'); ?>
     <!-- header section end  -->
     <section class="home">
         <div class="swiper home-slider">
