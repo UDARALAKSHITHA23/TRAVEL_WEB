@@ -509,6 +509,57 @@ section {
   text-align: center;
   margin-top: 2rem;
 }
+.booking .book-form {
+  padding: 2rem;
+  background: var(--light-bg);
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.booking .book-form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.booking .book-form .inputBox {
+  width: calc(50% - 1rem); /* Adjust width to fit two input boxes per row */
+  margin-bottom: 1rem;
+}
+.booking .book-form input[type="text"],
+.booking .book-form input[type="email"],
+.booking .book-form input[type="number"],
+.booking .book-form input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+/* Adjust input field on focus */
+.booking .book-form input[type="text"]:focus,
+.booking .book-form input[type="email"]:focus,
+.booking .book-form input[type="number"]:focus,
+.booking .book-form input[type="date"]:focus {
+  border-color: var(--primary-color); /* Change border color on focus */
+  outline: none;
+  background: var(--black);
+  color: var(--white);
+}
+.booking .book-form input[type="text"]:focus::placeholder,
+.booking .book-form input[type="email"]:focus::placeholder,
+.booking .book-form input[type="number"]:focus::placeholder,
+.booking .book-form input[type="date"]:focus::placeholder {
+  border-color: var(--primary-color); /* Change border color on focus */
+  outline: none;
+  background: var(--black);
+  color: var(--light-white);
+}
+.booking .book-form .flex .inputBox span {
+  font-size: 1.5rem;
+  color: var(--light-black);
+}
+
 .review .sw .footer {
   background: url(../image/footer3.jpg) no-repeat;
   background-size: cover; /* Scale the background image to cover the entire area of the footer. */
